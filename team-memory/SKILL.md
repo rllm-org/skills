@@ -25,7 +25,8 @@ Three areas matter:
   transcripts, datasets, artifacts, scratch — kept for retrieval, not loaded each
   session. Link to them from `.memory/` when agents should know they exist.
 
-Lead with memory: load `.memory/MEMORY.md` first; it points to the rest.
+Lead with memory and leave it better than you found it: load `.memory/MEMORY.md`
+first, and write back what you learn (step 3) so the next agent inherits it.
 
 ## 1. Preflight
 
@@ -59,15 +60,16 @@ surface that rather than silently overriding it; don't echo memory back unless
 asked. For anything bigger — a spec, a transcript, an artifact — follow memory's
 pointers or browse the drive.
 
-## 3. Write back
+## 3. Contribute back — this is the point
 
-When a session produces something worth keeping, pick the area above, then
-**confirm with the user first** — it's shared state every agent reads. **Writing
-needs a read/write PAT**; if yours is read-only, say so and stop.
+Loading memory is the easy half; it only compounds if agents **write to it** —
+what one learns, every future agent inherits. So a session of real work should
+leave memory better than it found it: **watch for anything durable** and
+**proactively offer to persist it** — don't wait to be asked.
 
-Before writing to memory, read the existing files and **extend one rather than
-duplicate it**; keep additions concise and high-level; update its line in
-`MEMORY.md` so other agents find it.
+When you write: a **read-only PAT can't** — say so and stop; otherwise **extend
+the right file rather than duplicate it**, keep it high-level, and update its line
+in the `MEMORY.md` / `CODING.md` index.
 
 ## Command reference
 
