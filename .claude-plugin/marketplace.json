@@ -1,0 +1,15 @@
+{
+  "name": "hivespace",
+  "owner": { "name": "rllm-org" },
+  "metadata": {
+    "description": "Hivespace plugins for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "team-memory",
+      "source": "./team-memory",
+      "description": "Load and contribute to your Hivespace team's shared memory each session.",
+      "category": "productivity"
+    }
+  ]
+}
