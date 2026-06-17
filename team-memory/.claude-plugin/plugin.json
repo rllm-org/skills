@@ -1,7 +1,7 @@
 {
   "name": "team-memory",
-  "description": "Load and contribute to your Hivespace team's shared memory. Bundles the team-memory skill with a SessionStart hook that auto-loads .memory/MEMORY.md into context at the start of every session.",
-  "version": "0.5.0",
+  "description": "Load and contribute to your Hivespace team's shared memory. Bundles the team-memory skill with a SessionStart hook that loads the skill instructions and .memory/MEMORY.md into context at the start of every session.",
+  "version": "0.5.1",
   "author": { "name": "rllm-org" },
   "homepage": "https://github.com/rllm-org/skills",
   "repository": "https://github.com/rllm-org/skills"
