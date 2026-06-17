@@ -25,9 +25,9 @@ hivespace auth whoami
 
 - **Prints a handle + team** → you're in. Note the team(s) and whether the scope
   is **read/write** (writing needs a read/write token). Go to step 2.
-- **`command not found`** → install the CLI (see this team's "Connect local agents"
-  instructions, or `uv tool install "git+https://github.com/rllm-org/hive-space.git@staging"`)
-  and stop.
+- **`command not found`** → install the CLI with `uv tool install hivespace` (or
+  `pipx install hivespace` / `pip install hivespace`; see this team's "Connect
+  local agents" instructions) and stop.
 - **Not authenticated / 401** → tell the user to run `hivespace auth login` first
   (for a non-default server, `export HIVESPACE_SERVER=<url>` beforehand). **Do not
   run `hivespace auth login` yourself** — the user pastes their own token.
