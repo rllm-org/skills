@@ -37,6 +37,21 @@ claude plugin install team-memory@hivespace
 Update with `claude plugin marketplace update hivespace`; remove with
 `claude plugin uninstall team-memory@hivespace`.
 
+### Seed your coding sessions (optional, one-time)
+
+To bootstrap the team's shared coding memory, upload your recent local
+coding-agent sessions to the drive — cloud agents distill them into
+`.memory/coding/` for every future agent. Use `hivespace fs upload-sessions`
+(part of the `hivespace` CLI) for an interactive picker (choose which repos to
+upload):
+
+```bash
+hivespace fs upload-sessions
+```
+
+Or just ask your agent: *"upload my recent coding sessions to the team."*
+Needs a read/write team token.
+
 ## Skills
 
 - **team-memory** — Read and contribute to a Hivespace team's shared drive /

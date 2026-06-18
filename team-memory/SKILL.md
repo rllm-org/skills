@@ -1,7 +1,7 @@
 ---
 name: team-memory
 version: "0.4"
-description: Read and write a Hivespace team's shared drive through the hivespace CLI (`hivespace fs …`) — the team's shared context as a filesystem. Load `.memory/` (shared team memory) at session start, keep coding-agent knowledge in `.memory/coding/`, store larger files elsewhere on the drive, and contribute durable knowledge back for the team's other agents. Triggers on "/team-memory", "load team memory", "team context", "team files", "team drive", "remember this for the team", "hivespace fs".
+description: Read and write a Hivespace team's shared drive through the hivespace CLI (`hivespace fs …`) — the team's shared context as a filesystem. Load `.memory/` (shared team memory) at session start, keep coding-agent knowledge in `.memory/coding/`, store larger files elsewhere on the drive, and contribute durable knowledge back for the team's other agents. Triggers on "/team-memory", "load team memory", "team context", "team files", "team drive", "remember this for the team", "hivespace fs", "upload my sessions", "seed coding sessions", "contribute my coding sessions".
 ---
 
 # Team Memory
@@ -21,9 +21,10 @@ Three areas matter:
   exactly — a `CODING.md` index plus flat topic files. The first agent to
   need it creates it and links it with one line in the root `MEMORY.md`; after
   that, just read and extend it.
-- **`.artifact/`, `transcripts/`, elsewhere — stored files.** Docs, specs,
-  transcripts, datasets, artifacts, scratch — kept for retrieval, not loaded each
-  session. Link to them from `.memory/` when agents should know they exist.
+- **`.artifact/`, `transcripts/`, `.claude-code/`, elsewhere — stored files.** Docs,
+  specs, transcripts, datasets, artifacts, scratch, and uploaded raw coding-agent
+  sessions (`.claude-code/`) — kept for retrieval, not loaded each session.
+  Link to them from `.memory/` when agents should know they exist.
 
 Lead with memory and leave it better than you found it: load `.memory/MEMORY.md`
 first, and write back what you learn (step 3) so the next agent inherits it.
@@ -70,6 +71,31 @@ leave memory better than it found it: **watch for anything durable** and
 When you write: a **read-only PAT can't** — say so and stop; otherwise **extend
 the right file rather than duplicate it**, keep it high-level, and update its line
 in the `MEMORY.md` / `CODING.md` index.
+
+## 4. Seed coding sessions
+
+Local coding-agent transcripts can be uploaded to `.claude-code/` on the
+drive, where the team's cloud agents distill them into `.memory/coding/` so every
+future agent inherits the learnings. Run `hivespace fs upload-sessions` (part of
+the `hivespace` CLI). It needs a **write-scoped** token and is a graceful no-op
+otherwise.
+
+When the user asks to **upload / contribute / seed** their coding sessions:
+
+1. **List what's available** — distinct working directories (repos) and how many
+   sessions each has:
+   ```bash
+   hivespace fs upload-sessions --list          # prints: <count>\t<working-dir>
+   ```
+2. **Ask the user which directories** to upload (show them the list).
+3. **Upload their picks** — comma-separated; uploads all sessions for each:
+   ```bash
+   hivespace fs upload-sessions --cwd <dir1>,<dir2>
+   ```
+
+Target **completed** sessions — the current live session is incomplete. Uploads
+are idempotent (re-running refreshes). A human can also run the command directly
+in a terminal with no args for an interactive picker.
 
 ## Command reference
 
