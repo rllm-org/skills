@@ -15,33 +15,33 @@ uv tool install hivespace && hivespace auth login
 ### Any agent (skill only)
 
 ```bash
-npx skills add rllm-org/skills --skill team-memory
+npx skills add rllm-org/skills --skill hivespace
 ```
 
 Works with any agent that supports the `SKILL.md` format (Claude Code, Codex,
-Cursor, Gemini CLI, OpenCode, … 40+). Then invoke it as `/team-memory`. The skill
-is **advisory** — the agent loads team memory when it judges the skill relevant.
+Cursor, Gemini CLI, OpenCode, … 40+). Then invoke it as `/hivespace`. The skill
+is **advisory** — the agent loads the team's context when it judges the skill relevant.
 
 ### Claude Code (skill + auto-load, recommended)
 
 This repo also ships as a Claude Code **plugin marketplace**, so the skill comes
-bundled with a `SessionStart` hook that **auto-loads `.memory/MEMORY.md` into
-context at the start of every session** — no need to rely on the agent invoking
-the skill:
+bundled with a `SessionStart` hook that **auto-loads `TEAM.md` (the drive map),
+`memory/MEMORY.md`, and `memory/coding/CODING.md` into context at the start of
+every session** — no need to rely on the agent invoking the skill:
 
 ```bash
 claude plugin marketplace add rllm-org/skills
-claude plugin install team-memory@hivespace
+claude plugin install hivespace@hivespace
 ```
 
 Update with `claude plugin marketplace update hivespace`; remove with
-`claude plugin uninstall team-memory@hivespace`.
+`claude plugin uninstall hivespace@hivespace`.
 
 ### Seed your coding sessions (optional, one-time)
 
 To bootstrap the team's shared coding memory, upload your recent local
 coding-agent sessions to the drive — cloud agents distill them into
-`.memory/coding/` for every future agent. Use `hivespace fs upload-sessions`
+`memory/coding/` for every future agent. Use `hivespace fs upload-sessions`
 (part of the `hivespace` CLI) for an interactive picker (choose which repos to
 upload):
 
@@ -54,6 +54,7 @@ Needs a read/write team token.
 
 ## Skills
 
-- **team-memory** — Read and contribute to a Hivespace team's shared drive /
-  memory via the `hivespace` CLI. Requires the CLI (`uv tool install hivespace`)
-  and a team token.
+- **hivespace** — Work with your Hivespace team from a local coding session via the
+  `hivespace` CLI: orient in team memory, read the drive and connected integrations,
+  and contribute learnings back. Requires the CLI (`uv tool install hivespace`) and a
+  team token.

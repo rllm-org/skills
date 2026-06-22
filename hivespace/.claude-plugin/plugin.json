@@ -1,0 +1,8 @@
+{
+  "name": "hivespace",
+  "description": "Work with your Hivespace team from a local coding session via the hivespace CLI. Bundles the hivespace skill with a SessionStart hook that loads the skill instructions, TEAM.md, memory/MEMORY.md, and memory/coding/CODING.md into context at the start of every session. Pairs with the `hivespace fs upload-sessions` command for uploading local coding-agent sessions to the team drive.",
+  "version": "0.6.1",
+  "author": { "name": "rllm-org" },
+  "homepage": "https://github.com/rllm-org/skills",
+  "repository": "https://github.com/rllm-org/skills"
+}

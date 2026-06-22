@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Hivespace skill — follow it this session. The team drive map and memory are already loaded below (skip the load step); apply the team conventions and contribute durable learnings back before you finish.'; echo; cat \"$CLAUDE_PLUGIN_ROOT/SKILL.md\" 2>/dev/null; echo; echo '--- Team drive map (TEAM.md) ---'; hivespace fs cat TEAM.md 2>/dev/null || true; echo; echo '--- Live team memory (memory/MEMORY.md) ---'; hivespace fs cat memory/MEMORY.md 2>/dev/null || true; echo; echo '--- Live coding memory (memory/coding/CODING.md) ---'; hivespace fs cat memory/coding/CODING.md 2>/dev/null || true",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
