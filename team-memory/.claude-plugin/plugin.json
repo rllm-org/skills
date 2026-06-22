@@ -1,7 +1,7 @@
 {
   "name": "team-memory",
-  "description": "Load and contribute to your Hivespace team's shared memory. Bundles the team-memory skill with a SessionStart hook that loads the skill instructions and .memory/MEMORY.md into context at the start of every session. Pairs with the `hivespace fs upload-sessions` command (from the hivespace CLI) for uploading local coding-agent sessions to the team drive.",
-  "version": "0.5.2",
+  "description": "Load and contribute to your Hivespace team's shared memory. Bundles the team-memory skill with a SessionStart hook that loads the skill instructions and memory/MEMORY.md into context at the start of every session. Pairs with the `hivespace fs upload-sessions` command (from the hivespace CLI) for uploading local coding-agent sessions to the team drive.",
+  "version": "0.6.0",
   "author": { "name": "rllm-org" },
   "homepage": "https://github.com/rllm-org/skills",
   "repository": "https://github.com/rllm-org/skills"
