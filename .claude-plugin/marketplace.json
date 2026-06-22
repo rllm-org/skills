@@ -6,9 +6,9 @@
   },
   "plugins": [
     {
-      "name": "team-memory",
-      "source": "./team-memory",
-      "description": "Load and contribute to your Hivespace team's shared memory each session.",
+      "name": "hivespace",
+      "source": "./hivespace",
+      "description": "Work with your Hivespace team from a local coding session via the hivespace CLI: orient in team memory, read the drive and connected integrations, and contribute learnings back.",
       "category": "productivity"
     }
   ]
