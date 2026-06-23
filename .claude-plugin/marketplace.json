@@ -10,6 +10,12 @@
       "source": "./hivespace",
       "description": "Work with your Hivespace team from a local coding session via the hivespace CLI: orient in team memory, read the drive and connected integrations, and contribute learnings back.",
       "category": "productivity"
+    },
+    {
+      "name": "hivespace-seed-memory",
+      "source": "./hivespace-seed-memory",
+      "description": "Seed team memory from your local coding sessions: read past sessions, note knowledge other agents will benefit from, confirm each memory with the user, and write it to the team drive. Resolves the cold-start problem.",
+      "category": "productivity"
     }
   ]
 }
