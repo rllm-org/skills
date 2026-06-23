@@ -37,6 +37,16 @@ claude plugin install hivespace@hivespace
 Update with `claude plugin marketplace update hivespace`; remove with
 `claude plugin uninstall hivespace@hivespace`.
 
+### Seed team memory from your sessions (optional)
+
+A second, user-invoked plugin that mines your local coding sessions into the team's
+shared memory — you confirm each memory before it's written. Good for bootstrapping a
+new team or onboarding a new member:
+
+```bash
+claude plugin install hivespace-seed-memory@hivespace
+```
+
 ### Seed your coding sessions (optional, one-time)
 
 To bootstrap the team's shared coding memory, upload your recent local
