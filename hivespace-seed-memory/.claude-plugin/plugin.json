@@ -1,0 +1,8 @@
+{
+  "name": "hivespace-seed-memory",
+  "description": "Seed a Hivespace team's shared memory from your local coding sessions: read past sessions, note knowledge other agents will benefit from, confirm each memory with the user, and write it to the team drive. Resolves the cold-start problem for a new team or teammate. User-invoked (no SessionStart hook); pairs with the hivespace skill and the `hivespace` CLI.",
+  "version": "0.1.0",
+  "author": { "name": "rllm-org" },
+  "homepage": "https://github.com/rllm-org/skills",
+  "repository": "https://github.com/rllm-org/skills"
+}
