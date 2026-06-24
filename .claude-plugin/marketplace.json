@@ -14,7 +14,7 @@
     {
       "name": "hivespace-seed-memory",
       "source": "./hivespace-seed-memory",
-      "description": "Seed team memory from your local coding sessions: read past sessions, note knowledge other agents will benefit from, confirm each memory with the user, and write it to the team drive. Resolves the cold-start problem.",
+      "description": "Seed team memory from your local coding sessions: mine past sessions for durable knowledge the codebase can't teach (conventions, decisions, traps), confirm each with the user, and write it to the team drive. Resolves the cold-start problem.",
       "category": "productivity"
     }
   ]
