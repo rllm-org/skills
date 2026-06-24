@@ -43,8 +43,10 @@ loud** (name the pointer and the why). One idea per note; link with `[[name]]`.
    *their* team ("Your team always promotes staging→main with a merge commit, because
    squashing re-diverges the branches"), not a vague category. A precise claim said
    back is the wow moment — the "oh, Claude actually gets our team" reaction — and
-   specificity is what earns it. Write nothing until approved; say which file it
-   extends vs. a new one.
+   specificity is what earns it. Present each in the same considered, mannered way —
+   the claim, a one-line why-it's-durable with its pointer, and whether it extends an
+   existing file or starts a new one — then wait for a yes / edit / skip. Write
+   nothing until approved.
 4. **Prune as you go.** For each stale note from step 2, confirm with the user, then
    delete it (or fold the durable part into a current note). Seeding that only adds
    rots; leaving the team smarter means cutting too.
