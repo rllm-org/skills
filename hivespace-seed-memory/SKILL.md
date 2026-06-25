@@ -1,6 +1,6 @@
 ---
 name: hivespace-seed-memory
-version: "0.1.1"
+version: "0.1.2"
 description: Seed a Hivespace team's shared memory from your local coding sessions — mine past sessions for durable knowledge the codebase can't teach (conventions, decisions, traps), confirm each with the user, and write it to the team drive. Resolves the cold-start problem for a new team or teammate. Triggers on "/onboard", "seed team memory", "bootstrap team memory", "cold start", "learn from my sessions".
 ---
 
@@ -36,7 +36,10 @@ loud** (name the pointer and the why). One idea per note; link with `[[name]]`.
 ## Steps
 
 1. **Pick sessions.** Ask which working directories to include — not personal or
-   unrelated repos.
+   unrelated repos. **Favor recent sessions** — they reflect how the team works
+   *now*. Lead with the most recent and weight them heavily; older sessions can fill
+   gaps, but when they conflict, the recent one wins (a convention may have changed —
+   that's a stale-note flag, not a keeper).
 2. **Mine for keepers.** Run candidates through the test above; most will fail, and
    that's expected. While reading, also flag existing notes that have gone stale.
 3. **Confirm one at a time.** Present each as a concrete, specific claim about
